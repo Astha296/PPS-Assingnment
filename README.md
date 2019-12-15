@@ -1,5 +1,5 @@
 # PPS-Assingnment>
-## Ques.1  
+## Ques.1  To change temperature from degree fahrenheit
 ```c 
 #include<stdio.h> 
 int main()
@@ -11,6 +11,9 @@ c=(5.0/9)*(f-32.0);
 printf("Temp in centigrade:%f\n",c);
 }
  ```
+Output:
+
+
  ## Ques2.
  ```c
  #include<stdio.h>
