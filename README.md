@@ -1,3 +1,7 @@
+## Name-Astha
+## Branch- IT A1
+## Class Roll no-1921016
+## University Roll no-1905312
 # PPS-Assingnment>
 ## Ques.1  To change temperature from degree fahrenheit
 ```c 
@@ -19,6 +23,7 @@ Temp in centigrade:7.222222
 
  ## Ques2. To find whether number is odd or even
  ```c
+
  #include<stdio.h>
 int main()
 {
@@ -30,6 +35,7 @@ printf("Number is Even\n");
 else
 printf("Number is Odd\n");
 } 
+
 Output:
 Enter the number:7
 Number is Odd
@@ -90,6 +96,7 @@ Enter desired number:6
            }
            printf("Largest number is %d",largest);
        }
+       
 Output:
 Enter first number
 8
@@ -115,6 +122,7 @@ for(i=1;i<=10;i++)
 printf("%d x %d = %d\n",n,i,n*i);
 }
 }
+
 Output:
 Enter Number:6
 6 x 1 = 6
@@ -157,6 +165,7 @@ printf("%d is  composite\n",j);
 a=0;
 }
 }
+
 Output:
 Enter 1st Number:
 3
@@ -237,8 +246,25 @@ Enter 2nd Number:5
 
                                  
 ```
-## Ques8
+## Ques8: To find the sum of 1st 100 numbers
 ```c 
+#include <stdio.h>
+int main()
+{
+int i,sum = 0;
+for(i = 0;i <= 100;i = i+1)
+{
+sum = sum + i;
+}
+printf("sum of 1 to 100 numbers is %d\n",sum);
+return 0;
+}
+
+Output:
+sum of 1 to 100 numbers is 5050
+
+
+
 
 ```
 ## Ques9:To print the following pattern(2)
@@ -260,6 +286,7 @@ printf("*");
 printf("\n");
 }
 }
+
 Output:
 Enter desired number4
 ****
@@ -289,13 +316,14 @@ long int multiplyNumbers(int n)
     else
         return 1;
 }
+
 Output:
 Enter a positive integer: 5
 Factorial of 5 = 120
 
 ```
 
-## Ques11. To do arithmatic operation using swtch statement
+## Ques11. To do arithmatic operation using switch statement
 ```c 
 #include<stdio.h>
 int main()
@@ -334,6 +362,7 @@ default:
 printf("Invalid Entry");
 }
 }
+
 Output:
 Select an operator:*
 Enter first number:5
@@ -363,6 +392,7 @@ else
 printf("number is odd\n");
 }
 }
+
 Output:
 Enter Number:4
 4 x 1 = 4
@@ -400,6 +430,7 @@ int main()
     printf("Reversed Number = %d", reversedNumber);
     return 0;
 }
+
 Output:
 Enter an integer: 548
 Reversed Number = 845
@@ -425,9 +456,294 @@ long int multiplyNumbers(int n) {
     else
         return 1;
 }
+
 Output:
 Enter a positive integer: 6
 Factorial of 6 = 720
+```
+
+# # Ques.15 To find if number is armstrong or not.
+ ```c
+#include<stdio.h>
+int main()
+{
+	int n,temp,rem,s=0;
+	printf("Enter desired number:");
+	scanf("%d",&n);
+	temp=n;
+	while(temp!=0){
+		rem=temp%10;
+		s=s+rem*rem*rem;
+		temp/=10;
+	}
+	if(s==n){
+		printf("Armstrong number\n");
+	}
+	else
+		printf("Not an Armstrong number\n");
+	return 0;
+}
+
+Output:
+Enter desired number:764
+Not an Armstrong number
 
 
-    ```
+
+ ```
+## Quest16.Matrics Addition
+ ```c
+ #include<stdio.h>
+int main()
+{
+int a[10][10],b[10][10],c[10][10],n,m,i,j;
+printf("enter the size of the matrix : ");
+scanf("%d %d",&m,&n);
+
+printf("enter the elements of matrix A : ");
+for (i=0;i<n;i++)
+{
+for(j = 0;j<m;j++)
+{
+scanf("%d",&a[i][j]);
+}
+}
+
+printf("enter the elements of matrix B : ");
+for(i = 0;i<n;i++)
+{
+for(j=0;j<m;j++)
+{
+scanf("%d",&b[i][j]);
+}
+}
+
+for(i = 0;i<n;i++)
+{
+for(j= 0;j<m;j++)
+{
+c[i][j] = a[i][j] + b[i][j];
+printf("%d\n",c[i][j]);
+}
+}
+return 0;
+}
+
+ ```
+ ## Ques 17. To enter details of employees using structure
+```
+#include<stdio.h>
+//#include<string.h>
+struct employee
+{
+char name[20];
+int age;
+char department[20];
+float salary;
+};
+
+int main()
+{
+struct employee aemployee;
+printf("enter employee's name : ");
+scanf("%s",&aemployee.name);
+printf("enter employee's age : ");
+scanf("%d",&aemployee.age);
+printf("enter employee's department : ");
+scanf("%s",&aemployee.department);
+printf("enter employee's salary : ");
+scanf("%f",&aemployee.salary);
+printf("An employee %s of age %d of department %s has a salary of %f",aemployee.name,aemployee.age,aemployee.department,aemployee.salary);
+return 0;
+}
+
+Output:
+enter employee's name : Arnav
+enter employee's age : 25
+enter employee's department : IT
+enter employee's salary : 100000000
+An employee Arnav of age 25 of department IT has a salary of 100000000.000000
+```
+## Ques 18 Program to find greatest among array.
+```
+#include<stdio.h>
+int main()
+{
+int array1[20];
+int n, i,largest;
+prinf("Enter the size of the array:");
+scanf("%d",&n);
+for(i=0;i<=n;i++)
+{
+printf("Enter the elements of the array[%d],i");
+scanf(%d",&array1[i]);
+}
+largest= array1[0];
+for(i=0;i<=n;i++)
+{
+if (array1[i]>largest)
+largest=array1[i];
+}
+printf("Greatest element is %d",largest);
+return 0;
+}
+```
+## Ques19.Programming for fizz buzz
+ ```
+ #include <stdio.h>
+int main()
+{
+int a;
+printf("enter any number : ");
+scanf("%d",&a);
+if (a%15 == 0)
+{
+printf("fizz_buzz");
+}
+else
+if (a%3 == 0)
+{
+printf("fizz");
+}
+else 
+if (a%5 == 0)
+{
+printf("buzz");
+}
+else 
+{
+printf("%d",a);
+}
+return(0);
+} 
+
+Output:
+enter any number : 6
+fizz
+```
+
+## Quest 20. Program to multiply two matrices
+```
+#include <stdio.h>
+
+#define SIZE 3 // Size of the matrix
+
+int main()
+{
+    int A[SIZE][SIZE]; // Matrix 1 
+    int B[SIZE][SIZE]; // Matrix 2
+    int C[SIZE][SIZE]; // Resultant matrix
+    
+    int row, col, i, sum;
+
+
+    /* Input elements in first matrix from user */
+    printf("Enter elements in matrix A of size %dx%d: \n", SIZE, SIZE);
+    for(row=0; row<SIZE; row++)
+    {
+        for(col=0; col<SIZE; col++)
+        {
+            scanf("%d", &A[row][col]);
+        }
+    }
+
+    /* Input elements in second matrix from user */
+    printf("\nEnter elements in matrix B of size %dx%d: \n", SIZE, SIZE);
+    for(row=0; row<SIZE; row++)
+    {
+        for(col=0; col<SIZE; col++)
+        {
+            scanf("%d", &B[row][col]);
+        }
+    }
+
+    /*
+     * Multiply both matrices A*B
+     */
+    for(row=0; row<SIZE; row++)
+    {
+        for(col=0; col<SIZE; col++)
+        {
+            sum = 0;
+            /*
+             * Multiply row of first matrix to column of second matrix
+             * and store sum of product of elements in sum.
+             */
+            for(i=0; i<SIZE; i++)
+            {
+                sum += A[row][i] * B[i][col];
+            }
+
+            C[row][col] = sum;
+        }
+    }
+
+    
+    printf("\nProduct of matrix A * B = \n");
+    for(row=0; row<SIZE; row++)
+    {
+        for(col=0; col<SIZE; col++)
+        {
+            printf("%d ", C[row][col]);
+        }
+        printf("\n");
+    }
+
+    return 0;
+}
+
+Output:
+Enter elements in matrix A of size 3x3: 
+3 4 6
+3 4 6
+2 4 8 
+
+Enter elements in matrix B of size 3x3: 
+7 8 9
+6 5 8 
+3 1 0
+
+Product of matrix A * B = 
+63 50 59 
+63 50 59 
+62 44 50 
+
+```
+## Ques21. To find sum of digits of a number
+ ```
+   #include <stdio.h>
+     
+    int main()
+    {
+       int n, t, sum = 0, remainder;
+     
+       printf("Enter an integer\n");
+       scanf("%d", &n);
+     
+       t = n;
+     
+       while (t != 0)
+       {
+          remainder = t % 10;
+          sum       = sum + remainder;
+          t         = t / 10;
+       }
+     
+       printf("Sum of digits of %d = %d\n", n, sum);
+     
+       return 0;
+    }
+    
+    Output:
+    Enter an integer
+793
+Sum of digits of 793 = 19
+
+
+
+
+ ```
+ 
+ 
+ ```
+
